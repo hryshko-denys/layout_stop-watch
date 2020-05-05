@@ -1,22 +1,25 @@
-.watch {
-  position: relative;
-  margin: 0 auto;
-  border: 3px solid #4b9aaa;
+.container {
   width: 500px;
   height: 500px;
+  margin: 0 auto; }
+
+.watch {
+  position: relative;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #4b9aaa; }
 
 .minute {
   position: absolute;
-  width: 25px;
-  height: 25px;
+  width: 8%;
+  height: 8%;
   border-radius: 50%;
   background-color: #4b9aaa;
   -webkit-animation: clock-second 3600s infinite linear;
-          animation: clock-second 3600s infinite linear;
-  z-index: 2; }
+          animation: clock-second 3600s infinite linear; }
 
 .minute::before {
   content: "";
@@ -25,33 +28,32 @@
   left: 50%;
   bottom: 50%;
   transform: translate(-50%, 0);
-  width: 8px;
+  width: 20%;
   border-radius: 30%;
   transform-origin: top right;
-  height: 120px;
+  height: 300%;
   background-color: #4b9aaa; }
 
 .second {
   position: absolute;
-  width: 25px;
-  height: 25px;
+  width: 8%;
+  height: 8%;
   border-radius: 50%;
   background-color: #4b9aaa;
   -webkit-animation: clock-second 60s infinite linear;
-          animation: clock-second 60s infinite linear;
-  z-index: 2; }
+          animation: clock-second 60s infinite linear; }
 
-.second::before {
+.second::after {
   content: "";
   display: block;
   position: absolute;
   left: 50%;
   bottom: 50%;
   transform: translate(-50%, 0);
-  width: 8px;
+  width: 20%;
   border-radius: 30%;
   transform-origin: top right;
-  height: 200px;
+  height: 500%;
   background-color: #d15559; }
 
 @-webkit-keyframes clock-second {
